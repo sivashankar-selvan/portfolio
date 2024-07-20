@@ -1,0 +1,232 @@
+Resources link
+
+
+https://github.com/mattboldt/typed.js
+
+https://fontawesome.com/search?q=code&o=r
+
+
+form submission
+
+https://formspree.io/forms/mgvwvgjd/integration
+
+
+
+html
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--main css-->
+    <link rel="stylesheet"  href="style/styles.css">
+    <title>Responsive personal potfolio</title>
+</head>
+<body>
+    <!-- Header design-->
+     <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+     </header>
+    <!-- Home section design-->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, I'm</h3>
+            <h1>SIVASHANKAR S</h1>
+            <h3>And I'm a Java developer</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolorem illo, veniam perferendis maxime blanditiis possimus a voluptatem magni. Praesentium nostrum dolor beatae aperiam obcaecati ea inventore quia voluptatum commodi.</p>
+            <a href="#" class="btn">Hire Me</a>
+            <div class="social-media">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a href="#" class="btn">Download Resume</a>
+        </div>
+        <div class="home-img">
+            <img src="images/profilephoto.jpg" alt="">
+        </div>
+    </section>
+    <!--about section design-->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="images/about.jpg" alt="">
+        </div>
+        <div class="about-content">
+            <h1 class="heading">ABOUT <span>Me</span></h1>
+            <h3>FullStack Developer</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste reiciendis exercitationem consectetur, temporibus animi doloribus debitis numquam et itaque non ipsa at eligendi quaerat, veritatis quod, suscipit repudiandae fugit similique!</p>
+            <a href="#" class="btn">Read more</a>
+        </div>
+    </section>
+
+    <script src="JS/main.js"></script>
+</body>
+</html>
+
+
+css
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth; 
+}
+
+:root{
+    --bg-color:#191f36;
+    --snd-bf-color:#262B40;
+    --text-color:#fff;
+    --main-color:#59B2F4;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+section{
+    min-height: 100vh;
+    padding: 100rem 9% 2 rem;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2-rem 9%;
+    background:var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    color: var(--text-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+    cursor: default;
+}
+
+.navbar a{
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-left: 4rem;
+}
+.navbar a:hover,.navbar a.active{
+    color: var(--text-color);
+}
+
+#menu-icon{
+    display: none;
+    color: var(--text-color);
+    font-size: 3.6rem;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.home-content{
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+span{
+    color: var(--main-color);
+}
+.home-content h1{
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+.home-img img{
+    width: 25vb;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage{
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-2.4rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.home-content p{
+    font-size: 1.6rem;
+
+}
+
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+.social-media a:hover{
+    background: var(--main-color);
+    color: var(--snd-bf-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    color: var(--bg-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    transition: .5s ease;
+
+}
+.btn :hover{
+    background: none;
+}
+
+
